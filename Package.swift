@@ -15,7 +15,13 @@ let package = Package(
             targets: ["Browsers"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/SwiftUI+Plus/Presentation.git", from: "1.0.0")
+    ],
     targets: [
-        .target(name: "Browsers")
+        .target(
+            name: "Browsers",
+            dependencies: ["Presentation"]
+        )
     ]
 )
