@@ -3,6 +3,8 @@
 
 # Browsers
 
+> Also available as a part of my [SwiftUI+ Collection](https://benkau.com/packages.json) – just add it to Xcode 13+
+
 A package that provides support for both WebView and SafariViewController (including proper presentation).
 
 ## SafariView
@@ -15,7 +17,7 @@ A package that provides support for both WebView and SafariViewController (inclu
 
 ## Installation
 
-The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (__preferred__)
+The code is packaged as a framework. You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (**preferred**)
 
 To install using Swift Package Manager, add this to the `dependencies` section of your `Package.swift` file:
 
