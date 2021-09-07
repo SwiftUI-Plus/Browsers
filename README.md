@@ -9,7 +9,30 @@ A package that provides support for both WebView and SafariViewController (inclu
 
 ## SafariView
 
-> Coming soon
+```swift
+@State private var url: URL?
+
+var body: some View {
+    Button {
+        url = URL(string: "https://benkau.com")
+    } label: {
+        Text("Show Safari")
+    }
+    .safari(url: $url) { url in
+        .safari(url: $url, style: .fullScreen) { url in
+            Safari(
+                configuration: SFSafariViewController.Configuration(),
+                activities: { url, title in [] },
+                excludedActivities: { url, title in [] },
+                preferredBarTintColor: .systemBackground,
+                preferredControlTintColor: .label,
+                dismissButtonStyle: .close
+            )
+        } 
+    }
+}
+}
+```
 
 ## WebView
 
