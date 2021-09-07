@@ -29,7 +29,6 @@ var body: some View {
         )
     }
 }
-}
 ```
 
 ## WebView
