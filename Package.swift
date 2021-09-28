@@ -16,7 +16,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/SwiftUI+Plus/Presentation.git", from: "1.0.0")
+        .package(name: "Presentation", url: "https://github.com/SwiftUI-Plus/Presentation.git", .exactItem("1.1.0"))
     ],
     targets: [
         .target(

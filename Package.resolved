@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Presentation",
+        "repositoryURL": "https://github.com/SwiftUI-Plus/Presentation.git",
+        "state": {
+          "branch": null,
+          "revision": "e8d8c9584a80dd580381111b476eadc0a266d626",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
