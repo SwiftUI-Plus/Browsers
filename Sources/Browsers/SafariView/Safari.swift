@@ -1,11 +1,12 @@
 import SafariServices
 
+public typealias DismissHandler = () -> Void
+
 #if os(iOS)
 
 /// Represents a Safari configuration
 public struct Safari {
 
-    public typealias DismissHandler = () -> Void
     public typealias ActivitiesHandler = (_ url: URL, _ title: String?) -> [UIActivity]
     public typealias ExcludedActivitiesHandler = (_ url: URL, _ title: String?) -> [UIActivity.ActivityType]
 

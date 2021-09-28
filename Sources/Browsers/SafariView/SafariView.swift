@@ -8,9 +8,9 @@ internal struct SafariView: View {
 
     let url: URL
     let safari: Safari
-    let onDismiss: Safari.DismissHandler
+    let onDismiss: DismissHandler
 
-    init(url: URL, safari: Safari, onDismiss: @escaping Safari.DismissHandler) {
+    init(url: URL, safari: Safari, onDismiss: @escaping DismissHandler) {
         self.url = url
         self.safari = safari
         self.onDismiss = onDismiss
@@ -35,7 +35,7 @@ public extension View {
     ///   - style: The presentation style
     ///   - onDismiss: Called when Safari is dismissed
     ///   - configuration: Provide a configuration for Safari
-    func safari(url: Binding<URL?>, style: UIModalPresentationStyle = .fullScreen, onDismiss: Safari.DismissHandler? = nil, configuration: @escaping (URL) -> Safari) -> some View {
+    func safari(url: Binding<URL?>, style: UIModalPresentationStyle = .fullScreen, onDismiss: DismissHandler? = nil, configuration: @escaping (URL) -> Safari) -> some View {
         present(item: url, isModal: true, style: style) {
             url.wrappedValue = nil
             onDismiss?()

@@ -9,7 +9,7 @@ extension SafariView {
 
         let url: URL
         let safari: Safari
-        let onDismiss: Safari.DismissHandler
+        let onDismiss: DismissHandler
 
         func makeCoordinator() -> Coordinator {
             Coordinator(url: url, safari: safari, onDismiss: onDismiss)
@@ -28,10 +28,10 @@ extension SafariView {
 
     final class Coordinator: NSObject, SFSafariViewControllerDelegate, UIViewControllerTransitioningDelegate {
         let safari: Safari
-        let onDismiss: Safari.DismissHandler
+        let onDismiss: DismissHandler
         let controller: SFSafariViewController
 
-        init(url: URL, safari: Safari, onDismiss: @escaping Safari.DismissHandler) {
+        init(url: URL, safari: Safari, onDismiss: @escaping DismissHandler) {
             if let configuration = safari.configuration {
                 self.controller = SFSafariViewController(url: url, configuration: configuration)
             } else {
