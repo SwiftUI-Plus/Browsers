@@ -1,5 +1,6 @@
-import UIKit
 import SafariServices
+
+#if os(iOS)
 
 /// Represents a Safari configuration
 public struct Safari {
@@ -40,3 +41,5 @@ public struct Safari {
     }
 
 }
+
+#endif

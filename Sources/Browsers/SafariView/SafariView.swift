@@ -2,6 +2,8 @@ import SwiftUI
 import SafariServices
 import Presentation
 
+#if os(iOS)
+
 internal struct SafariView: View {
 
     let url: URL
@@ -46,3 +48,5 @@ public extension View {
     }
     
 }
+
+#endif

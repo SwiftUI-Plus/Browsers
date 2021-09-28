@@ -1,6 +1,8 @@
 import SwiftUI
 import SafariServices
 
+#if os(iOS)
+
 extension SafariView {
 
     struct Representable: UIViewControllerRepresentable {
@@ -61,3 +63,5 @@ extension SafariView {
     }
 
 }
+
+#endif
