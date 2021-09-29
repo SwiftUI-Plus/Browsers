@@ -4,20 +4,23 @@ import Presentation
 
 #if os(iOS)
 
-internal struct SafariView: View {
+/// Represents a Safari view controller. This view can be safely used by a `NavigationLink`. If you want to show Safari modally, its best to use the `safari` modifier instead.
+public struct SafariView: View {
 
     let url: URL
     let safari: Safari
     let onDismiss: DismissHandler
 
-    init(url: URL, safari: Safari, onDismiss: @escaping DismissHandler) {
+    public init(url: URL, safari: Safari = .init(), onDismiss: @escaping DismissHandler = { }) {
         self.url = url
         self.safari = safari
         self.onDismiss = onDismiss
     }
 
-    var body: some View {
+    public var body: some View {
         Representable(url: url, safari: safari, onDismiss: onDismiss)
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.all)
     }
 
