@@ -19,8 +19,6 @@ public struct SafariView: View {
 
     public var body: some View {
         Representable(url: url, safari: safari, onDismiss: onDismiss)
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarHidden(true)
             .edgesIgnoringSafeArea(.all)
     }
 
